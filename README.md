@@ -81,8 +81,8 @@ fun_fact: I debug with console.log and I'm not ashamed
 
 <div align="center">
 
-<img src="https://github-readme-stats.vercel.app/api?username=sarthak-vaidya&show_icons=true&theme=tokyonight&hide_border=true&include_all_commits=true&count_private=true&bg_color=0d1117&title_color=6E57F7&text_color=c9d1d9&icon_color=6E57F7" height="180"/>
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=sarthak-vaidya&layout=compact&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=6E57F7&text_color=c9d1d9" height="180"/>
+<img src="https://github-readme-stats.vercel.app/api?username=dvlopersarthak&show_icons=true&theme=tokyonight&hide_border=true&include_all_commits=true&count_private=true&bg_color=0d1117&title_color=6E57F7&text_color=c9d1d9&icon_color=6E57F7" height="180"/>
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=dvlopersarthak&layout=compact&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=6E57F7&text_color=c9d1d9" height="180"/>
 
 </div>
 
