@@ -135,37 +135,44 @@ zypecode
 
 <br/>
 
-## `04` &nbsp; 3D Contribution Graph
+## `04` &nbsp; 3D Contribution City — Live Right Now
 
 <div align="center">
 
-<!--START_YOSHI389111_3D_CONTRIB-->
+<img src="https://isometric-contributions-spectrewolf8.onrender.com/api/graph?username=dvloperSarthak&theme=dark&stats=true" width="100%" alt="3D isometric contribution city"/>
+
+*Your real commit history, rendered live as a 3D isometric city — no setup, updates automatically.*
+*(Hosted on a free instance — first load after inactivity can take ~30–50s to spin up.)*
+
+</div>
+
+<br/>
+
+<details>
+<summary><b>🐍 Go further — rotating 3D grass render + snake animation (5-min one-time setup)</b></summary>
+<br/>
+
+Two more real, widely-used widgets — but unlike the one above, GitHub requires these to run as Actions **inside your own repo** since they commit generated files back to it. Both are copy-paste, run-once-and-forget:
+
+<div align="center">
+
+**Rotating isometric grass render** — `yoshi389111/github-profile-3d-contrib`
+<br/>
 <img src="./profile-3d-contrib/profile-night-rainbow.svg" width="100%" alt="3D contribution graph"/>
-<!--END_YOSHI389111_3D_CONTRIB-->
 
-*Rotating isometric render of your real commit history — auto-updates daily via GitHub Actions.*
-*(One-time setup required — see `⚙ Setup` section below.)*
-
-</div>
-
+**Snake eating your contributions** — `Platane/snk`
 <br/>
-
-## `05` &nbsp; The Snake Eats My Commits
-
-<div align="center">
-
-<!--START_SNAKE-->
 <img src="https://raw.githubusercontent.com/dvloperSarthak/dvloperSarthak/output/github-contribution-grid-snake-dark.svg" width="100%" alt="snake eating contribution graph"/>
-<!--END_SNAKE-->
-
-*A snake that literally eats your contribution graph, frame by frame. Auto-generated daily.*
-*(One-time setup required — see `⚙ Setup` section below.)*
 
 </div>
 
+Exact workflow YAML for both is in the `⚙ Setup` section at the bottom of this README.
+
+</details>
+
 <br/>
 
-## `06` &nbsp; GitHub Achievements
+## `05` &nbsp; GitHub Achievements
 
 <div align="center">
 
@@ -184,7 +191,7 @@ zypecode
 
 <br/>
 
-## `07` &nbsp; GitHub Analytics
+## `06` &nbsp; GitHub Analytics
 
 <div align="center">
 
@@ -201,7 +208,7 @@ zypecode
 
 <br/>
 
-## `08` &nbsp; Featured Work
+## `07` &nbsp; Featured Work
 
 <div align="center">
 
@@ -216,7 +223,7 @@ zypecode
 
 <br/>
 
-## `09` &nbsp; Let's Connect
+## `08` &nbsp; Let's Connect
 
 <div align="center">
 
@@ -241,11 +248,11 @@ npm install -g zypecode
 <br/>
 
 <details>
-<summary><b>⚙ Setup — how to activate the 3D graph & snake animation</b></summary>
+<summary><b>⚙ Setup — how to activate the optional grass render & snake animation</b></summary>
 
 <br/>
 
-Both widgets above need to render from **your own** commit data, so GitHub requires them to run as Actions inside your `dvloperSarthak/dvloperSarthak` repo (not something I can generate remotely). It's a 5-minute, one-time setup:
+The 3D city in section `04` already works with zero setup. These two extra widgets need to render from **your own** commit data and commit files back to your repo, so GitHub requires them to run as Actions inside `dvloperSarthak/dvloperSarthak` (not something I can generate remotely). It's a 5-minute, one-time setup:
 
 **1. 3D contribution graph** — create `.github/workflows/3d-contrib.yml`:
 
