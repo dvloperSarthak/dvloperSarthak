@@ -144,15 +144,23 @@ zypecode
 *Your real commit history, rendered live as a 3D isometric city — no setup, updates automatically.*
 *(Hosted on a free instance — first load after inactivity can take ~30–50s to spin up.)*
 
+<br/><br/>
+
+**Want the fully interactive version?** — rotate, zoom, and orbit your own contribution city in real 3D (WebGL, built with Three.js). GitHub strips JavaScript from READMEs so this can't be embedded inline, but it's one click away:
+
+<a href="https://honzaap.github.io/GithubCity"><img src="https://img.shields.io/badge/🏙_Launch_GitHub_City-Interactive_3D_(WebGL)-6E57F7?style=for-the-badge"/></a>
+
+*(Enter `dvloperSarthak` as the username on the page to build your city.)*
+
 </div>
 
 <br/>
 
 <details>
-<summary><b>🐍 Go further — rotating 3D grass render + snake animation (5-min one-time setup)</b></summary>
+<summary><b>🐍 Go further — rotating 3D grass render, animated 3D bars, and a snake (5-min one-time setup)</b></summary>
 <br/>
 
-Two more real, widely-used widgets — but unlike the one above, GitHub requires these to run as Actions **inside your own repo** since they commit generated files back to it. Both are copy-paste, run-once-and-forget:
+Three more real, widely-used widgets — but unlike the ones above, GitHub requires these to run as Actions **inside your own repo** since they commit generated files back to it. All are copy-paste, run-once-and-forget:
 
 <div align="center">
 
@@ -160,13 +168,17 @@ Two more real, widely-used widgets — but unlike the one above, GitHub requires
 <br/>
 <img src="./profile-3d-contrib/profile-night-rainbow.svg" width="100%" alt="3D contribution graph"/>
 
+**Animated 3D bar chart (GIF)** — `funayamateppei/github-contributions-3d`
+<br/>
+<img src="./assets/contributions-3d.gif" width="100%" alt="3D animated contribution bars"/>
+
 **Snake eating your contributions** — `Platane/snk`
 <br/>
 <img src="https://raw.githubusercontent.com/dvloperSarthak/dvloperSarthak/output/github-contribution-grid-snake-dark.svg" width="100%" alt="snake eating contribution graph"/>
 
 </div>
 
-Exact workflow YAML for both is in the `⚙ Setup` section at the bottom of this README.
+Exact workflow YAML for all three is in the `⚙ Setup` section at the bottom of this README.
 
 </details>
 
@@ -248,11 +260,11 @@ npm install -g zypecode
 <br/>
 
 <details>
-<summary><b>⚙ Setup — how to activate the optional grass render & snake animation</b></summary>
+<summary><b>⚙ Setup — how to activate the optional grass render, 3D bars, and snake</b></summary>
 
 <br/>
 
-The 3D city in section `04` already works with zero setup. These two extra widgets need to render from **your own** commit data and commit files back to your repo, so GitHub requires them to run as Actions inside `dvloperSarthak/dvloperSarthak` (not something I can generate remotely). It's a 5-minute, one-time setup:
+The 3D city and the GitHub City link in section `04` already work with zero setup. These three extra widgets need to render from **your own** commit data and commit files back to your repo, so GitHub requires them to run as Actions inside `dvloperSarthak/dvloperSarthak` (not something I can generate remotely). It's a 5-minute, one-time setup each:
 
 **1. 3D contribution graph** — create `.github/workflows/3d-contrib.yml`:
 
@@ -284,7 +296,38 @@ jobs:
 
 Run it once manually (Actions tab → Run workflow), then the image lands at `./profile-3d-contrib/profile-night-rainbow.svg` — matching what's already referenced above.
 
-**2. Snake game** — create `.github/workflows/snake.yml`:
+**2. Animated 3D bar chart** — create `.github/workflows/3d-bars.yml`:
+
+```yaml
+name: Contributions-3D
+on:
+  schedule:
+    - cron: "0 0 * * *"
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: assets
+      - uses: funayamateppei/github-contributions-3d@main
+        with:
+          github_user_name: dvloperSarthak
+      - name: Commit & Push
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add -A .
+          git commit -m "generated" || exit 0
+          git push
+```
+
+This generates the GIF on an `assets` branch — copy the resulting file into `/assets/contributions-3d.gif` on your `main` branch (or update the image path above to point at the `assets` branch directly).
+
+**3. Snake game** — create `.github/workflows/snake.yml`:
 
 ```yaml
 name: Snake
