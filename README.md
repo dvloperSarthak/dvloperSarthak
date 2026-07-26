@@ -1,3 +1,4 @@
+<a name="top"></a>
 <div align="center">
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=220&section=header&text=Sarthak%20Vaidya&fontSize=60&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=Full-Stack%20Developer%20%E2%80%A2%20AI%20Builder%20%E2%80%A2%20Creator%20of%20ZypeCode&descAlignY=58&descSize=18" width="100%"/>
@@ -11,11 +12,33 @@
 <img src="https://img.shields.io/badge/India-FF9933?style=for-the-badge&logo=googlemaps&logoColor=white"/>
 <img src="https://komarev.com/ghpvc/?username=dvloperSarthak&style=for-the-badge&color=A78BFA&label=PROFILE+VIEWS"/>
 
+<br/><br/>
+
+<a href="#-about-me">About</a> •
+<a href="#-flagship-project">ZypeCode</a> •
+<a href="#-tech-stack">Stack</a> •
+<a href="#-3d-contribution-city">3D City</a> •
+<a href="#-github-achievements">Achievements</a> •
+<a href="#-github-analytics">Analytics</a> •
+<a href="#-featured-work">Work</a> •
+<a href="#-connect-with-me">Connect</a>
+
 </div>
 
 <br/>
 
-## `01` &nbsp; About Me
+<div align="center">
+
+```
+$ whoami
+> Full-stack dev turning caffeine into AI tools, one commit at a time.
+```
+
+</div>
+
+<br/>
+
+## 🧬 About Me
 
 <table align="center">
 <tr>
@@ -84,7 +107,7 @@ sarthak.config:
 
 <br/>
 
-## `02` &nbsp; Flagship Project
+## ⚡ Flagship Project
 
 <div align="center">
 
@@ -103,7 +126,7 @@ zypecode
 
 <br/>
 
-## `03` &nbsp; Tech Stack
+## 🛠 Tech Stack
 
 <div align="center">
 
@@ -135,7 +158,9 @@ zypecode
 
 <br/>
 
-## `04` &nbsp; 3D Contribution City — Live Right Now
+## 🏙 3D Contribution City
+
+<p align="center"><sub><b>Live right now — zero setup</b></sub></p>
 
 <div align="center">
 
@@ -184,7 +209,7 @@ Exact workflow YAML for all three is in the `⚙ Setup` section at the bottom of
 
 <br/>
 
-## `05` &nbsp; GitHub Achievements
+## 🏆 GitHub Achievements
 
 <div align="center">
 
@@ -203,7 +228,7 @@ Exact workflow YAML for all three is in the `⚙ Setup` section at the bottom of
 
 <br/>
 
-## `06` &nbsp; GitHub Analytics
+## 📊 GitHub Analytics
 
 <div align="center">
 
@@ -220,7 +245,7 @@ Exact workflow YAML for all three is in the `⚙ Setup` section at the bottom of
 
 <br/>
 
-## `07` &nbsp; Featured Work
+## 📌 Featured Work
 
 <div align="center">
 
@@ -235,7 +260,7 @@ Exact workflow YAML for all three is in the `⚙ Setup` section at the bottom of
 
 <br/>
 
-## `08` &nbsp; Let's Connect
+## 🌎 Connect With Me
 
 <div align="center">
 
@@ -264,7 +289,7 @@ npm install -g zypecode
 
 <br/>
 
-The 3D city and the GitHub City link in section `04` already work with zero setup. These three extra widgets need to render from **your own** commit data and commit files back to your repo, so GitHub requires them to run as Actions inside `dvloperSarthak/dvloperSarthak` (not something I can generate remotely). It's a 5-minute, one-time setup each:
+The 3D city and the GitHub City link in the **3D Contribution City** section already work with zero setup. These three extra widgets need to render from **your own** commit data and commit files back to your repo, so GitHub requires them to run as Actions inside `dvloperSarthak/dvloperSarthak` (not something I can generate remotely). It's a 5-minute, one-time setup each:
 
 **1. 3D contribution graph** — create `.github/workflows/3d-contrib.yml`:
 
@@ -357,8 +382,16 @@ jobs:
 
 This pushes to an `output` branch — which is exactly the URL already referenced above.
 
-Once both workflows run once, refresh your profile and everything lights up automatically from then on. No further maintenance needed.
+Once all three workflows run once, refresh your profile and everything lights up automatically from then on. No further maintenance needed.
 
 </details>
+
+<br/>
+
+<div align="center">
+
+<sub>Built with too much coffee and a bit too much CSS. <a href="#top">Back to top ↑</a></sub>
+
+</div>
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=120&section=footer" width="100%"/>
